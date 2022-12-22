@@ -17,6 +17,7 @@ const MovieSearch = (props) => {
           className='searchInput'
           type='text'
           placeholder='Type to search...'
+          maxLength={40}
         />
         <div className='search-sugg'>
           {props.suggestions &&

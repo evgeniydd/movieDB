@@ -5,7 +5,7 @@ import MovieSearch from './components/MovieSearch';
 
 function App() {
   const [movie, setMovie] = useState([]);
-  const [movieID, setMovieID] = useState(338953);
+  const [movieID, setMovieID] = useState(76600);
   const [searchTerm, setSearchTerm] = useState('');
   const BASE_API = `https://api.themoviedb.org/3/movie/${movieID}?&api_key=cfe422613b250f702980a3bbf9e90716`;
   const [suggestions, setSuggestions] = useState([]);
@@ -59,6 +59,7 @@ function App() {
 
   const test = (sugg) => {
     setMovieID(sugg);
+    console.log(sugg);
     setSuggestions([]);
     setSearchTerm('');
   };
