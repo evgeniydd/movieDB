@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+/* font-family: 'Anaheim', sans-serif; */
+/* font-family: 'Exo', sans-serif; */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  color: #fff;
+  font-family: 'Anaheim', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.outer-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.2) 40%, #000 90%);
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  margin: 0 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-wrap {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-wrap-right {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.card-poster {
+  max-width: 370px;
+}
+
+.card-wrap-right {
+  max-width: 560px;
+  padding: 25px;
+}
+.card-title {
+  font-family: 'Exo', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-size: 22px;
+  padding: 10px 0 0;
+  color: #d9ff00;
+}
+
+.overview {
+  padding: 10px 0;
+}
+
+.genre {
+  font-size: 22px;
+  padding: 10px 0 0;
+  color: #d9ff00;
+}
+
+.release-details {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.release-details div {
+  display: flex;
+  flex-direction: column;
+}
+.release-details div span {
+  font-size: 28px;
+  color: #d9ff00;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  max-width: 930px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 600;
+  flex: 2;
+}
+.logo span {
+  color: #d9ff00;
+}
+
+.search-box {
+  position: relative;
+}
+.searchInput {
+  font-family: 'Anaheim', sans-serif;
+  padding: 4px 10px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.search-form {
+  flex: 2;
+}
+
+.genre span:last-child .comma,
+.production span:last-child .comma {
+  display: none;
+}
+
+.search-sugg {
+  position: absolute;
+  width: 450px;
+  background-color: rgba(0, 0, 0, 0.9);
+  max-height: 300px;
+  overflow-y: hidden;
+}
+.sugg-item {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.sugg-item:hover {
+  background-color: #d9ff00;
+  color: #000;
+}
+
+@media (max-width: 760px) {
+  .card-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .app {
+    height: auto;
+  }
+  .outer-container {
+    height: auto;
   }
 }
